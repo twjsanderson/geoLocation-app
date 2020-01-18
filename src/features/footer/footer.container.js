@@ -9,21 +9,15 @@ const Footer = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link>
-                            <Link to="/privacy">
-                                Privacy
-                            </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/termsandconditions">
-                                Terms And Conditions
-                            </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/contact">
-                                Contact Us
-                            </Link>
-                        </Nav.Link>
+                        <Link className="p-2" to="/privacy">
+                            Privacy
+                        </Link>
+                        <Link className="p-2" to="/termsandconditions">
+                            Terms And Conditions
+                        </Link>
+                        <Link className="p-2" to="/contact">
+                            Contact Us
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

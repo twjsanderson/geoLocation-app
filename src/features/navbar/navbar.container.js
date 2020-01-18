@@ -6,29 +6,24 @@ const Navagation = () => {
     return (
         <section id="navbar">
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand>
-                    <Link to="/">
-                        GeoAccess
-                    </Link>
-                </Navbar.Brand>
+                <Link className="p-2" to="/">
+                    Browser Power
+                </Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Link>
-                            <Link to="/resources">
-                                Learn More
-                            </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/about">
-                                About Us
-                            </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/project">
-                                The Open Door Security Project
-                            </Link>
-                        </Nav.Link>
+                        <Link className="p-2" to="/">
+                            Home
+                        </Link>
+                        <Link className="p-2" to="/resources">
+                            Learn More
+                        </Link>
+                        <Link className="p-2" to="/about">
+                            About Us
+                        </Link>
+                        <Link className="p-2" to="/project">
+                            The Open Door Security Project
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
