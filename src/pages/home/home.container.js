@@ -5,7 +5,7 @@ import HomeComponent from './home.component'
 
 const Home = (props) => {
     const { isGeolocationAvailable, isGeolocationEnabled, coords, positionError } = props;
-    console.log(coords)
+
     const [geoLocationData, setGeoLocationData] = useState({});
     const [geoLocationAvailable, setGeoLocationAvailable] = useState(null);
     const [geoLocationEnabled, setGeoLocationEnabled] = useState(null);
@@ -14,9 +14,8 @@ const Home = (props) => {
     const showData = () => {
         setGeoLocationAvailable(isGeolocationAvailable);
         setGeoLocationEnabled(isGeolocationEnabled);
-        return (!geoLocationEnabled || !geoLocationAvailable) ? 
-            setGeoLocationError(positionError) : 
-            setGeoLocationData(coords);
+        setGeoLocationError(positionError);
+        setGeoLocationData(coords);
     }
     
     return (
