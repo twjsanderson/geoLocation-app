@@ -1,36 +1,16 @@
-import React, { useState } from 'react'
-import { Button } from 'react-bootstrap';
-import { geolocated } from "react-geolocated";
-import HomeComponent from './home.component'
+import React from 'react'
 
-const Home = (props) => {
-    const { isGeolocationAvailable, isGeolocationEnabled, coords, positionError } = props;
+// components
+import HomeView from './home.component';
+import GetLocation from '../../features/getLocation';
 
-    const [geoLocationData, setGeoLocationData] = useState({});
-    const [geoLocationAvailable, setGeoLocationAvailable] = useState(null);
-    const [geoLocationEnabled, setGeoLocationEnabled] = useState(null);
-    const [geoLocationError, setGeoLocationError] = useState(null);
-
-    const showData = () => {
-        setGeoLocationAvailable(isGeolocationAvailable);
-        setGeoLocationEnabled(isGeolocationEnabled);
-        setGeoLocationError(positionError);
-        setGeoLocationData(coords);
-    }
-    
+const Home = () => {    
     return (
         <section id='home'>
-        <HomeComponent />
-            <h1>{geoLocationData.latitude} {geoLocationData.longitude}</h1>
-            <h3>{geoLocationError}</h3>
-            <Button onClick={() => showData()}>Click me</Button>
+            <HomeView />
+            <GetLocation />
         </section>
     )
 }
 
-export default geolocated({
-    positionOptions: {
-        enableHighAccuracy: true,
-    },
-    userDecisionTimeout: 5000,
-})(Home);
+export default Home;

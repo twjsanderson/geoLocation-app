@@ -2,14 +2,14 @@ import React, { } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // components
-import Navbar from './features/navbar';
+import Navigation from './features/navbar';
 import routes from './routes';
 import Footer from './features/footer';
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navigation />
       <section id="app">
         {routes}
       </section>
