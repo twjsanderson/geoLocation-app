@@ -1,39 +1,54 @@
 import React, { useState } from 'react'
-import { deviceDetect } from 'react-device-detect';
+import { 
+    deviceDetect,
+    osName,
+    osVersion,
+    browserVersion,
+    mobileVendor,
+    mobileModel,
+    engineName,
+    deviceType
+} from 'react-device-detect';
 
 // components
 import UserInformationView from './userinformation.component';
-import { Button } from 'react-bootstrap';
 
 const UserInformation = () => {
     const [userData, setUserData] = useState({});
+    const [mobileData, setMobileData] = useState({});
+
         const getUserData = () => {
             let device = deviceDetect();
             let dataObject = { 
-                osName: device.osName,
-                osVersion: device.osVersion
+                osName: osName,
+                osVersion: osVersion,
+                browserName: device.browserName,
+                browserVersion: browserVersion,
+                engineName: engineName,
+                deviceType: deviceType
+            };
+            let mobileObject = {
+                mobileModel, mobileVendor
             }
             setUserData(dataObject);
+            setMobileData(mobileObject);
         }
+
+        const clearData = () => {
+            setUserData({});
+            setMobileData({});
+        };
+
     return (
-        <section id="userinformation-view">
-            <h1>user container</h1>
-            <h1>{userData.osName}</h1>
-            <h1>{userData.osVersion}</h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <Button
-                onClick={() => getUserData()}    
-            >
-            CLick it
-            </Button>
-            <UserInformationView />
+        <section id="userinformation">
+            <UserInformationView
+                userData={userData}
+                mobileData={mobileData}
+                getUserData={getUserData}
+                clearData={clearData}
+            />
         </section>
-    )
-}
+    );
+};
 
 export default UserInformation;
