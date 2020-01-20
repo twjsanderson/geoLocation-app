@@ -8,11 +8,11 @@ const ConnectionView = (props) => {
         <section id='connection-view'>
             {
                 connectionData !== null ?
-                <>
-                    <h1>Network Type: {connectionData.networkType}</h1>
-                    <h1>Approximate Bandwith: {connectionData.approxBandwith} Megabits per Second</h1>
-                </> :
-                null
+                    <>
+                        <h1>Network Type: {connectionData.networkType}</h1>
+                        <h1>Approximate Bandwith: {connectionData.approxBandwith} Megabits per Second</h1>
+                    </> 
+                    : null
             }
             <Button 
                 onClick={() => getConnectionData()}

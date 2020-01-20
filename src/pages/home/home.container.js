@@ -1,10 +1,15 @@
 import React from 'react'
+import './index.css'
 
 // components
 import HomeView from './home.component';
+
+// features
 import GetLocation from '../../features/getLocation';
 import UserInformation from '../../features/userInformation';
-import Connection from '../../features/connection/connection.container';
+import Connection from '../../features/connection';
+import Languages from '../../features/languages';
+import AutoFill from '../../features/autofill';
 
 const Home = () => {    
     return (
@@ -13,6 +18,8 @@ const Home = () => {
             <GetLocation />
             <UserInformation />
             <Connection />
+            <Languages />
+            <AutoFill />
         </section>
     )
 }
