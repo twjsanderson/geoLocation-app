@@ -4,6 +4,7 @@ import React from 'react'
 import HomeView from './home.component';
 import GetLocation from '../../features/getLocation';
 import UserInformation from '../../features/userInformation';
+import Connection from '../../features/connection/connection.container';
 
 const Home = () => {    
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <HomeView />
             <GetLocation />
             <UserInformation />
+            <Connection />
         </section>
     )
 }
