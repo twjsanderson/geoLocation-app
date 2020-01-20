@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const ShowLocation = (props) => {
+const GetLocationView = (props) => {
     const {
         geoLocationAvailable, 
         geoLocationEnabled,
@@ -37,4 +37,4 @@ const ShowLocation = (props) => {
     );
 };
 
-export default ShowLocation;
+export default GetLocationView;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { geolocated } from "react-geolocated";
 
 // components
-import ShowLocation from './getLocation.component';
+import GetLocationView from './getLocation.component';
  
 const GetLocation = (props) => {
     const { isGeolocationAvailable, isGeolocationEnabled, coords, positionError } = props;
@@ -28,7 +28,7 @@ const GetLocation = (props) => {
     
     return (
         <section id="get-location">
-            <ShowLocation 
+            <GetLocationView 
                 geoLocationAvailable={geoLocationAvailable} 
                 geoLocationEnabled={geoLocationEnabled}
                 geoLocationError={geoLocationError}
