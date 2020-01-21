@@ -1,10 +1,13 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap';
+import './autofill.css';
 
 const AutoFillView = (props) =>  {
     const { 
         email, 
         HandleChange,
+        style,
+        ShowFields,
         ClearForm 
     } = props;
 
@@ -28,7 +31,7 @@ const AutoFillView = (props) =>  {
                     <Form.Control type='text' name='name' />
                 </Form.Group>
 
-                <Form.Group controlId='formAddress'>
+                <Form.Group className={style} controlId='formAddress'>
                     <Form.Label>Address</Form.Label>
                     <Form.Control type='text' name='address' />
                 </Form.Group>
@@ -71,7 +74,7 @@ const AutoFillView = (props) =>  {
             </Form>
 
             <Button
-                // onClick={() => ()}
+                onClick={() => ShowFields()}
             >
                 Show Results
             </Button>

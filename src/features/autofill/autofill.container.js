@@ -5,13 +5,14 @@ import AutoFillView from './autofill.component';
 
 const AutoFill = () =>  {
     const [email, setEmail] = useState('');
+    const [style, setStyle] = useState('hidden');
 
     const HandleChange = (e) => {
         setEmail(e.target.value);
     };
 
     const ShowFields = () => {
-
+        setStyle('')
     };
 
     const ClearForm = () => {
@@ -23,6 +24,8 @@ const AutoFill = () =>  {
             <AutoFillView 
                 email={email}
                 HandleChange={HandleChange}
+                style={style}
+                ShowFields={ShowFields}
                 ClearForm={ClearForm}
             />
         </section>
