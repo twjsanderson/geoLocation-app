@@ -2,20 +2,27 @@ import React from 'react'
 import { Button, Form } from 'react-bootstrap';
 
 const AutoFillView = (props) =>  {
-    const { autoFill, getAutoFill, clearAutoFill } = props;
+    const { 
+        email, 
+        HandleChange,
+        ClearForm 
+    } = props;
+
+    // need to pass down css style to hide fields
+
     return (
         <section id='protocol-view'>
-
-            <Form autoComplete="true">
+            <Form autoComplete='true'>
                 <Form.Group controlId='formBasicEmail'>
                     <Form.Label>Email address</Form.Label>
                     <Form.Control 
                         type='email' 
-                        placeholder='Enter email' 
-                        onChange={(e) => this.handleChange(e, "email")}
+                        placeholder='Enter email'
+                        value={email} 
+                        onChange={(e) => HandleChange(e)}
                     />
                 </Form.Group>
-
+                
                 <Form.Group controlId='formName'>
                     <Form.Label>Name</Form.Label>
                     <Form.Control type='text' name='name' />
@@ -55,18 +62,18 @@ const AutoFillView = (props) =>  {
                     <Form.Label>Credit Card Expiry</Form.Label>
                     <Form.Control type='number' name='cc-exp' />
                 </Form.Group>
-
+                    
                 <Button
-                    onClick={() => clearAutoFill()}
+                    onClick={() => ClearForm()}
                 >
-                    Clear AutoFill
+                    Clear Results
                 </Button>
             </Form>
 
             <Button
-                onClick={() => getAutoFill()}
+                // onClick={() => ()}
             >
-                Show AutoFill
+                Show Results
             </Button>
         </section>
     )

@@ -4,22 +4,26 @@ import React, { useState } from 'react'
 import AutoFillView from './autofill.component'; 
 
 const AutoFill = () =>  {
-    const [autoFill, setAutoFill] = useState(null);
+    const [email, setEmail] = useState('');
 
-    const getAutoFill = () => {
-        
+    const HandleChange = (e) => {
+        setEmail(e.target.value);
     };
 
-    const clearAutoFill = () => {
-        setAutoFill(null);
+    const ShowFields = () => {
+
+    };
+
+    const ClearForm = () => {
+        setEmail('');
     };
 
     return (
         <section id='Protocol'>
             <AutoFillView 
-                autoFill={autoFill}
-                getAutoFill={getAutoFill}
-                clearAutoFill={clearAutoFill}
+                email={email}
+                HandleChange={HandleChange}
+                ClearForm={ClearForm}
             />
         </section>
     )
