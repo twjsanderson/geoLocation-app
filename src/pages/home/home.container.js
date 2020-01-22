@@ -10,6 +10,7 @@ import UserInformation from '../../features/userInformation';
 import Connection from '../../features/connection';
 import Languages from '../../features/languages';
 import AutoFill from '../../features/autofill';
+import TimeOnPage from '../../features/timeOnPage';
 
 const Home = () => {    
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <Connection />
             <Languages />
             <AutoFill />
+            <TimeOnPage />
         </section>
     )
 }

@@ -66,16 +66,16 @@ const AutoFillView = (props) =>  {
 
             <Button
                 className="mt-4"
-                onClick={() => closeForm()}
+                onClick={() => showFields()}
             >
-                Clear Results
+                Show Results
             </Button>
 
             <Button
                 className="mt-4"
-                onClick={() => showFields()}
+                onClick={() => closeForm()}
             >
-                Show Results
+                Hide Results
             </Button>
         </section>
     )
