@@ -1,6 +1,9 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
+// components
+import MapContainer from '../map';
+
 const GetLocationView = (props) => {
     const {
         geoLocationAvailable, 
@@ -23,6 +26,11 @@ const GetLocationView = (props) => {
                                 <>
                                     <h1>Latitude: {geoLocationData.latitude}</h1>
                                     <h1>Longitude: {geoLocationData.longitude}</h1> 
+                                    <MapContainer 
+                                        mapStyles={{  width: '50%', height: '50%'}} 
+                                        lat={geoLocationData.latitude}  
+                                        lon={geoLocationData.longitude} 
+                                    />
                                 </>
                                 ) : null
             }

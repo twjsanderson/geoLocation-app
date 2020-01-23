@@ -6,19 +6,23 @@ import track from 'react-tracking';
 import TimeOnPageView from './timeOnPage.component';
 import TrackingButton from '../trackingButton/trackingButton';
 
-const TimeOnPage = () => {
+const TimeOnPage = (props) => {
+    const { landingTime } = props;
     const [date, setDate] = useState(null);
     const [trackingData, setTrackingData] = useState(null);
+    const [referrer, setReferrer] = useState(null);
+    const [showData, setShowData] = useState(false);
 
     const showTime = () => {
-        const today = new Date();
-        setDate(today.toDateString());
+        setDate(landingTime);
         setTrackingData(window.dataLayer.length);
+        setReferrer(window.document.referrer);
+        setShowData(true);
     };
 
     const clearTime = () => {
         setDate(null);
-        setTrackingData(0);
+        setShowData(false);
     };
 
     return (
@@ -44,9 +48,9 @@ const TimeOnPage = () => {
                 clearTime={clearTime} 
                 date={date} 
                 trackingData={trackingData}
+                referrer={referrer}
+                showData={showData}
             />
-            
-            
         </section>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.css'
 
 // components
@@ -12,7 +12,14 @@ import Languages from '../../features/languages';
 import AutoFill from '../../features/autofill';
 import TimeOnPage from '../../features/timeOnPage';
 
-const Home = () => {    
+const Home = () => {
+    const [landingTime, setLandingTime] = useState(null);
+
+    useEffect(() => {
+        setLandingTime(new Date().toString()); // date & time user landed on page
+    }, [])
+    
+    
     return (
         <section id='home'>
             <HomeView />
@@ -21,7 +28,7 @@ const Home = () => {
             <Connection />
             <Languages />
             <AutoFill />
-            <TimeOnPage />
+            <TimeOnPage landingTime={landingTime} />
         </section>
     )
 }
