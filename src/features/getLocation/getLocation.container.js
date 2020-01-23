@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { geolocated } from "react-geolocated";
+import './index.css';
 
 // components
 import GetLocationView from './getLocation.component';
@@ -27,7 +28,7 @@ const GetLocation = (props) => {
     };
     
     return (
-        <section id="get-location">
+        <section id="getlocation">
             <GetLocationView 
                 geoLocationAvailable={geoLocationAvailable} 
                 geoLocationEnabled={geoLocationEnabled}

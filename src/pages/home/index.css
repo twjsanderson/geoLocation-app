@@ -1,3 +1,7 @@
-#home {
-    height: 1200px;
+#home-view {
+    background-image: url('../../assets//images/home-background.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 50em;
+    color: white;
 }

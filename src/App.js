@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // components
@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Navigation />
-      <section id="app">
+      <section id='app'>
         {routes}
       </section>
       <Footer />

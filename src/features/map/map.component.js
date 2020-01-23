@@ -5,7 +5,7 @@ const MapView = (props) => {
     return (
         <section id='map-view'>
             <h1>Map</h1>
-            {mapCreator()}
+            { mapCreator() }
         </section>
     )
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {  } from 'react-bootstrap';
 import './index.css'
 
 // components
@@ -22,13 +23,13 @@ const Home = () => {
     
     return (
         <section id='home'>
-            <HomeView />
-            <GetLocation />
-            <UserInformation />
-            <Connection />
-            <Languages />
-            <AutoFill />
-            <TimeOnPage landingTime={landingTime} />
+                <HomeView />
+                <GetLocation />
+                <UserInformation />
+                <Connection />
+                <Languages />
+                <AutoFill />
+                <TimeOnPage landingTime={landingTime} />
         </section>
     )
 }
