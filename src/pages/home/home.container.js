@@ -20,7 +20,7 @@ const Home = () => {
         setLandingTime(new Date().toString()); // date & time user landed on page
     }, [])
     
-    
+
     return (
         <section id='home'>
                 <HomeView />
