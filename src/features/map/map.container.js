@@ -32,7 +32,7 @@ const MapContainer = (props) => {
                     lat: lat,
                     lng: lon
                   }}
-                zoom={15}
+                zoom={13}
                 style={mapStyles}
                 onClick={onMapClicked}
             >

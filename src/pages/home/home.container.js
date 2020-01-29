@@ -6,6 +6,7 @@ import './index.css'
 import HomeView from './home.component';
 
 // features
+import Intro from '../../features/Intro/Intro';
 import GetLocation from '../../features/getLocation';
 import UserInformation from '../../features/userInformation';
 import Connection from '../../features/connection';
@@ -24,6 +25,7 @@ const Home = () => {
     return (
         <section id='home'>
                 <HomeView />
+                <Intro />
                 <GetLocation />
                 <UserInformation />
                 <Connection />

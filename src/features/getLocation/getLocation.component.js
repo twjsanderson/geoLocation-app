@@ -17,8 +17,10 @@ const GetLocationView = (props) => {
         <section id='getlocation-view'>
             <Container>
                 <Row>
-                    <h1>Title</h1>
-                    <h3>Details about this section</h3>
+                    <Col>
+                        <h1>Title</h1>
+                        <h3>Details about this section</h3>
+                    </Col>
                 </Row>
                 <Row>
                     <Col>
@@ -33,6 +35,10 @@ const GetLocationView = (props) => {
                                                 <>
                                                     <h1>Latitude: {geoLocationData.latitude}</h1>
                                                     <h1>Longitude: {geoLocationData.longitude}</h1> 
+                                                    <h1>Accuracy: {geoLocationData.accuracy > 300 ? 
+                                                        <h1>Poor</h1> : 
+                                                        <h1>Good</h1>} 
+                                                        {geoLocationData.accuracy}</h1>
                                                 </>
                                             ) : null
                         }

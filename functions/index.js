@@ -5,12 +5,14 @@ const gmailEmail = functions.config().email.user;
 const gmailPass = functions.config().email.pass;
 
 exports.submit = functions.https.onRequest((req, res) => {
+
     cors(req, res, () => {
         if (req.method !== 'POST') {
-            return res.status(500).json({
-                message: 'Not allowed'
+            return res.status(405).json({
+                message: 'Request method not allowed'
             });
         };
+
         const mailTransport = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             service: 'gmail',
@@ -23,23 +25,20 @@ exports.submit = functions.https.onRequest((req, res) => {
         });
 
         const mailOptions = {
-            from: 'test@gmail.com',
+            from: req.body.email,
             to: gmailEmail,
-            subject: `test`,
+            subject: `Message from Browser Power contact form`,
             html: `<p>${req.body.message}</p>`
         };
 
         return mailTransport.sendMail(mailOptions).then(info => {
-            console.log(info);
             return res.status(200).json({
                 message: 'message sent!'
             });
         }).catch(error => {
-            console.log(error);
             return res.status(500).json({
                 message: error
             });
         })
-    })
-            
-})
+    });         
+});

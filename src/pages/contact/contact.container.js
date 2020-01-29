@@ -20,18 +20,30 @@ const Contact = () => {
             <h1>Contact</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <label>
-                    e-mail:
+                    Email:
                     <br />
-                    <input type="email" name="email" value={email} onChange={e => setEmail(e.target.value)} />
+                    <input 
+                        type="email" 
+                        name="email" 
+                        value={email} 
+                        onChange={e => setEmail(e.target.value)} 
+                    />
                 </label>
-                <br />
                 <label>
-                    Message
+                    Message:
                     <br />
-                    <textarea type="text" name="message" value={message} onChange={e => setMessage(e.target.value)} />
+                    <textarea 
+                        type="text" 
+                        name="message" 
+                        value={message} 
+                        onChange={e => setMessage(e.target.value)} 
+                    />
                 </label>
                 <br />
-                <input type="submit" value="submit" />
+                <input 
+                    type="submit" 
+                    value="submit" 
+                />
             </form>
         </div>
     )

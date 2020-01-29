@@ -44,6 +44,9 @@ const GetLocation = (props) => {
 export default geolocated({
     positionOptions: {
         enableHighAccuracy: true,
+        maximumAge: 0,
+        timeout: 30000,
     },
-    userDecisionTimeout: 5000,
+    geolocationProvider: navigator.geolocation,
+    isOptimisticGeolocationEnabled: true
 })(GetLocation);
