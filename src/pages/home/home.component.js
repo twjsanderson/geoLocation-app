@@ -4,6 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
+// TODO: add links to title and Get Started
+
 const HomeView = () => {
     return (
         <section id='home-view'>
