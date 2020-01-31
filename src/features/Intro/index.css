@@ -18,7 +18,12 @@
     background-color: #4cb385;
 }
 
-.disclaimer-text {
+.disclaimer-title {
     font-family: 'Permanent Marker', cursive;
     font-size: 2rem;
+}
+
+.disclaimer-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
 }

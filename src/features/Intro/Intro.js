@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './index.css';
 
-// TODO: maybe change styling if needed?
+// TODO: put disclaimer as pop up!
 
 const Intro = () => {
     return (
@@ -23,25 +23,25 @@ const Intro = () => {
                         </p>
                         <p>
                             Every tool is accompanied by an explanantion of how your data was collected, how it could 
-                            be analyzed, sold and potentially abused by a website or mobile app.
+                            be analyzed, sold and used by a company or hacker.
                         </p>
                    </Col>
                 </Row>
             </Container>
-            <Row>
+            {/* <Row>
                 <Col className='disclaimer text-center p-3'>
                     <Container>
-                        <p className='disclaimer-text'>
-                            <p className='text-danger'>
+                            <p className='disclaimer-title text-danger'>
                                 Disclaimer:
                             </p> 
-                            Any information pulled from your browser by Browser Power is NOT collected, stored or 
+                            <p className='disclaimer-text'>
+                            Any information pulled from your browser is NEVER collected, stored or 
                             analyzed in any form. It is only displayed on your system for strictly educational 
                             purposes.
                         </p>
                     </Container>
                 </Col>
-            </Row>
+            </Row> */}
         </section>
     )
 };

@@ -4,7 +4,6 @@ const MapView = (props) => {
     const { mapCreator } = props;
     return (
         <section id='map-view'>
-            <h1>Map</h1>
             { mapCreator() }
         </section>
     )

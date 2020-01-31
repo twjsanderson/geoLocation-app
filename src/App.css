@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.tool-button {
+    background-color: #904BB4;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.4rem;
+    border-color: white;
+    padding: 0.8rem;
+    margin: 0.5rem;
+}
+
+.tool-button:hover {
+    background-color: white;
+    border-color: #904BB4;
+    color: #904BB4;
+}
+
+.tool-button:active {
+    background-color: white !important;
+    border-color: #904BB4 !important;
+    color: #904BB4 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.tool-button:focus {
+    background-color: #904BB4;
+    border-color: white;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+}
