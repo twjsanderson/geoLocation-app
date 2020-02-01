@@ -8,9 +8,11 @@ const Connection = () => {
     
     const getConnectionData = () => {
         let data = window.clientInformation.connection;
+        console.log(window)
         let connectionObject = {
             networkType: data.effectiveType,
-            approxBandwith: data.downlink
+            approxBandwith: data.downlink,
+            roundTrip: data.rtt
         };
         setConnectionData(connectionObject)
     };

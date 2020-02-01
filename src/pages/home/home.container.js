@@ -30,7 +30,7 @@ const Home = () => {
                 <UserInformation />
                 <Connection />
                 <Languages />
-                <AutoFill />
+                {/* <AutoFill /> */}
                 <TimeOnPage landingTime={landingTime} />
         </section>
     )

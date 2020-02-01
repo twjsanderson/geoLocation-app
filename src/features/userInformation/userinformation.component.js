@@ -15,35 +15,32 @@ const UserInformationView = (props) => {
     return (
         <section id="userinformation-view">
             <Container>
-            <Row className='text-center'>
+                <Row className='text-center'>
                     <Col className='p-2'>
                         <h1>
                             System Identifier
                         </h1>
                         <h4 className='p-4'>
-                            This tool uses the browser to find your location on a map with your current 
-                            latitude and longitude.
+                            This tool uses the browser to identify your browser, Operating System and Device Type.
                         </h4>
                         <h3>How?</h3>
                         <p>
-                            Using something called the Browser Object Model (or BOM), developers can 
-                            get the latitude and longitude of a device or computer that navigates 
-                            to their website. If you want to try this yourself check out our free 
-                            exercise page here: <br /> Exercise #1 
+                            The Browser Object Model (or BOM) allows developers to access readily
+                            available information about your personal device.
                         </p>
                         <h3>Who?</h3>
                         <p>
-                            This technique (and many variations of it) are used all over the internet 
-                            by small businesses, large corporations, hackers, governments agencies 
-                            and personal websites. 
+                            The BOM is an excellent tool for companies and hackers to assess the 
+                            capabilities of a user's system.
                         </p>
                         <h3>Why?</h3>
                         <p>
-                            Geo location tracking is usually employed by businesses who want to learn 
-                            more about their customers, help them find physical storefronts and make 
-                            it easier to connect users with relevant content. This functionality helps 
-                            developers do everything from track user engagement to find out where people 
-                            live! 
+                            Tech and marketing companies may value this information to assess 
+                            their Browser or Operating System's current market share. This kind 
+                            of business intelligence can be used to build sales strategies, change
+                            marketing content and drive corporate acquisitions. It can also be 
+                            used by hackers to find vulnerabilities in the specific model of a 
+                            user's system.  
                         </p>
                     </Col>
                 </Row>

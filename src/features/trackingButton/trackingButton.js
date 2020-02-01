@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useTracking } from 'react-tracking';
 
 const TrackingButton = (props) => {
-    const { name, alt, style, fn } = props;
+    const { name, alt, fn } = props;
     const { trackEvent } = useTracking();
 
     return (
@@ -12,7 +12,7 @@ const TrackingButton = (props) => {
             trackEvent({ event: 'tracking button pushed' })
             fn()
         }}
-        className={style}
+        className='tool-button'
         alt={alt}
       >
         {name}

@@ -38,7 +38,7 @@ const TimeOnPage = (props) => {
                         <Timer.Minutes />
                     </Timer>
                 } 
-                track={
+                trackingButton={
                     <TrackingButton 
                         name={'track'}
                         alt={'tracking button'}
