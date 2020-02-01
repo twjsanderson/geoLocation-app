@@ -16,8 +16,7 @@ const browserImages = {
     'Edge': edgeLogo,
     'Yandex': yandexLogo,
     'Chromium': chromiumLogo,
-    'Mobile Safari': safariLogo,
-    null: 'Sorry we don\'t have an image for your browser!'
+    'Mobile Safari': safariLogo
 };
 
 export default browserImages;

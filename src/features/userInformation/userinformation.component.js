@@ -1,8 +1,13 @@
 import React from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import './index.css';
+
+// constants
 import browserImages from '../../constants/browserImages';
 import osImages from '../../constants/osImages';
+
+// components
+import ImageDisplay from '../imageDisplay';
 
 const UserInformationView = (props) => {
     const { userData, mobileData, getUserData, clearData } = props;
@@ -66,32 +71,16 @@ const UserInformationView = (props) => {
                         }
                     </Col>
                     <Col md={3}>
-                        {
-                            Object.keys(browserImages).map((key, index) => {
-                                return key === userData.browserName ?
-                                    <img 
-                                        src={browserImages[key]}
-                                        alt='key'
-                                        key={index}
-                                        className='image'
-                                    />
-                                    : null
-                            })
-                        }
+                        <ImageDisplay 
+                            images={browserImages}
+                            item={userData.browserName}
+                        />
                     </Col>
                     <Col md={3}>
-                        {
-                            Object.keys(osImages).map((key, index) => {
-                                return key === userData.osName ?
-                                    <img 
-                                        src={osImages[key]}
-                                        alt='key'
-                                        key={index}
-                                        className='image'
-                                    />
-                                    : null
-                            })
-                        }
+                        <ImageDisplay 
+                            images={osImages}
+                            item={userData.osName}
+                        />
                     </Col>
                 </Row>
                 <Row>
