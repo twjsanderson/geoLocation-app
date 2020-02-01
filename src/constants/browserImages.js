@@ -17,7 +17,7 @@ const browserImages = {
     'Yandex': yandexLogo,
     'Chromium': chromiumLogo,
     'Mobile Safari': safariLogo,
-    'Other': 'Sorry we don\'t have an image for your browser!'
+    null: 'Sorry we don\'t have an image for your browser!'
 };
 
 export default browserImages;

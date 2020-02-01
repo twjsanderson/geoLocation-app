@@ -19,7 +19,7 @@ const GetLocationView = (props) => {
                 <Row className='text-center'>
                     <Col className='p-2'>
                         <h1>
-                            Where are you?
+                            Geolocator
                         </h1>
                         <h4 className='p-4'>
                             This tool uses the browser to find your location on a map with your current 

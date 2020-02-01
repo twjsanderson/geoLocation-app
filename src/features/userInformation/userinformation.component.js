@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import './index.css';
 import browserImages from '../../constants/browserImages';
+import osImages from '../../constants/osImages';
 
 const UserInformationView = (props) => {
     const { userData, mobileData, getUserData, clearData } = props;
@@ -12,7 +13,7 @@ const UserInformationView = (props) => {
             <Row className='text-center'>
                     <Col className='p-2'>
                         <h1>
-                            Your System!
+                            System Identifier
                         </h1>
                         <h4 className='p-4'>
                             This tool uses the browser to find your location on a map with your current 
@@ -41,7 +42,7 @@ const UserInformationView = (props) => {
                         </p>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='h-100 justify-content-center align-items-center'>
                     <Col md={5} className='text-center'>
                         {
                             userData.osName && userData.browserName ?
@@ -64,7 +65,7 @@ const UserInformationView = (props) => {
                                 : null
                         }
                     </Col>
-                    <Col>
+                    <Col md={3}>
                         {
                             Object.keys(browserImages).map((key, index) => {
                                 return key === userData.browserName ?
@@ -72,6 +73,21 @@ const UserInformationView = (props) => {
                                         src={browserImages[key]}
                                         alt='key'
                                         key={index}
+                                        className='image'
+                                    />
+                                    : null
+                            })
+                        }
+                    </Col>
+                    <Col md={3}>
+                        {
+                            Object.keys(osImages).map((key, index) => {
+                                return key === userData.osName ?
+                                    <img 
+                                        src={osImages[key]}
+                                        alt='key'
+                                        key={index}
+                                        className='image'
                                     />
                                     : null
                             })

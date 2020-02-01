@@ -3,12 +3,6 @@
 
 #getlocation-view {
     background-color: #4cb385;
-    background-image:
-        linear-gradient(
-            to bottom, 
-            #4cb385, 
-            white 80%
-        );
 }
 
 h1 {
