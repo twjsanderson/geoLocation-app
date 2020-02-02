@@ -13,29 +13,27 @@ const LanguagesView = (props) => {
                             Your Languages
                         </h1>
                         <h4 className='p-4'>
-                            This tool uses the browser to find your location on a map with your current 
-                            latitude and longitude.
+                            This tool peaks at your browser settings to find out what language(s) you use.
                         </h4>
                         <h3>How?</h3>
                         <p>
-                            Using something called the Browser Object Model (or BOM), developers can 
-                            get the latitude and longitude of a device or computer that navigates 
-                            to their website. If you want to try this yourself check out our free 
-                            exercise page here: <br /> Exercise #1 
+                            Have you ever wondered why every web page you go to seems to know what language 
+                            you speak? Your browser does a great job of storing this information for websites
+                            use. 
                         </p>
                         <h3>Who?</h3>
                         <p>
-                            This technique (and many variations of it) are used all over the internet 
-                            by small businesses, large corporations, hackers, governments agencies 
-                            and personal websites. 
+                            This information helps modern browsers translate foriegn languages into 
+                            something you can understand. For multilingual users, browsers also store
+                            a list of alternate language choices that you may have used or interacted 
+                            with in the past. 
                         </p>
                         <h3>Why?</h3>
                         <p>
-                            Geo location tracking is usually employed by businesses who want to learn 
-                            more about their customers, help them find physical storefronts and make 
-                            it easier to connect users with relevant content. This functionality helps 
-                            developers do everything from track user engagement to find out where people 
-                            live! 
+                            In order to capture the attention of users who speak different languages,
+                            websites will often utilize this feature to increase their market share around 
+                            the world. It can also be utilized by hackers to gain a small but vital piece 
+                            of information about a potential target.
                         </p>
                     </Col>
                 </Row>
@@ -61,13 +59,13 @@ const LanguagesView = (props) => {
                             className='tool-button'
                             onClick={() => getCurrentLanguage()}
                         >
-                            Show Language
+                            Show Language Information
                         </Button>
                         <Button
                             className='tool-button'
                             onClick={() => clearLanguages()}
                         >
-                            Clear Language
+                            Clear Language Information
                         </Button>
                     </Col>
                 </Row>

@@ -20,6 +20,11 @@ p {
     font-size: 1.2rem;
 }
 
+.icon {
+    height: auto;
+    width: 3rem;
+}
+
 #poor {
     color: red;
 }

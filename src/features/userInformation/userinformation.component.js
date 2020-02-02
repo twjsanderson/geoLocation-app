@@ -5,9 +5,13 @@ import './index.css';
 // constants
 import browserImages from '../../constants/browserImages';
 import osImages from '../../constants/osImages';
+import systemContent from '../../constants/toolInformation';
 
 // components
 import ImageDisplay from '../imageDisplay';
+import ToolDescriptions from '../toolDescriptions';
+
+const content = systemContent.systemContent;
 
 const UserInformationView = (props) => {
     const { userData, mobileData, getUserData, clearData } = props;
@@ -15,35 +19,13 @@ const UserInformationView = (props) => {
     return (
         <section id="userinformation-view">
             <Container>
-                <Row className='text-center'>
-                    <Col className='p-2'>
-                        <h1>
-                            System Identifier
-                        </h1>
-                        <h4 className='p-4'>
-                            This tool uses the browser to identify your browser, Operating System and Device Type.
-                        </h4>
-                        <h3>How?</h3>
-                        <p>
-                            The Browser Object Model (or BOM) allows developers to access readily
-                            available information about your personal device.
-                        </p>
-                        <h3>Who?</h3>
-                        <p>
-                            The BOM is an excellent tool for companies and hackers to assess the 
-                            capabilities of a user's system.
-                        </p>
-                        <h3>Why?</h3>
-                        <p>
-                            Tech and marketing companies may value this information to assess 
-                            their Browser or Operating System's current market share. This kind 
-                            of business intelligence can be used to build sales strategies, change
-                            marketing content and drive corporate acquisitions. It can also be 
-                            used by hackers to find vulnerabilities in the specific model of a 
-                            user's system.  
-                        </p>
-                    </Col>
-                </Row>
+                <ToolDescriptions 
+                    title={content.title}
+                    description={content.description}
+                    how={content.how}
+                    who={content.who}
+                    why={content.why}
+                />
                 <Row className='h-100 justify-content-center align-items-center'>
                     <Col md={5} className='text-center'>
                         {

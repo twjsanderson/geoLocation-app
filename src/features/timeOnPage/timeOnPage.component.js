@@ -11,7 +11,7 @@ const TimeOnPageView = (props) => {
                 <Row className='text-center'>
                     <Col className='p-2'>
                         <h1>
-                            Time On Page
+                            Where are you going?
                         </h1>
                         <h4 className='p-4'>
                             This tool uses the browser to find your location on a map with your current 
@@ -41,14 +41,14 @@ const TimeOnPageView = (props) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
-                        {date}
+                    <Col className='text-center'> 
+                        { date ? <h4>You landed on this page on: {date}</h4> : null }
                         {
                             showData === true ? (
                                 <>
-                                    <h1>You came to this site from: {referrer}</h1>
-                                    <h1>You have opened the time example for {minutes} mins : {seconds} secs</h1>
-                                    <h1>You have clicked the tracking button: {trackingData} time(s) in the time example.</h1>
+                                    <h4>You came to this site from: {referrer}</h4>
+                                    <h4>This tool has been open for: {minutes} mins : {seconds} secs</h4>
+                                    <h4>You have clicked the tracking button: {trackingData} time(s) in the time example.</h4>
                                 </>
                                 ) : null
                         }
@@ -61,7 +61,7 @@ const TimeOnPageView = (props) => {
                             className='tool-button'
                             onClick={() => clearTime()}
                         >
-                            Clear Time
+                            Clear Tracking Information
                         </Button>
                     </Col>
                 </Row>

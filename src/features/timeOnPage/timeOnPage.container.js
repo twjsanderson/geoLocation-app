@@ -40,8 +40,8 @@ const TimeOnPage = (props) => {
                 } 
                 trackingButton={
                     <TrackingButton 
-                        name={'track'}
-                        alt={'tracking button'}
+                        name={'Show Tracking Information'}
+                        alt={'Show Tracking Information'}
                         fn={showTime}
                     />
                 }
