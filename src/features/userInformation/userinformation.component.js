@@ -16,6 +16,8 @@ const content = systemContent.systemContent;
 const UserInformationView = (props) => {
     const { userData, mobileData, getUserData, clearData } = props;
 
+    const blueStyle = { style: 'm-4 bg-secondary text-center rounded' };
+
     return (
         <section id="userinformation-view">
             <Container>
@@ -25,6 +27,7 @@ const UserInformationView = (props) => {
                     how={content.how}
                     who={content.who}
                     why={content.why}
+                    style={blueStyle.style}
                 />
                 <Row className='h-100 justify-content-center align-items-center'>
                     <Col md={5} className='text-center'>

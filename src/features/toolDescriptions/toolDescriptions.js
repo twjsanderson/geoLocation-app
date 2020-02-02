@@ -1,10 +1,12 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuestionCircle, faUsers, faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faQuestionCircle, faUsers, faWrench } from '@fortawesome/free-solid-svg-icons';
+
+// components
+import ToolDescription from './toolDescription';
 
 const ToolDescriptions = (props) => {
-    const { title, description, how, who, why } = props;
+    const { title, description, how, who, why, style } = props;
 
     return (
         <section id='tool-decriptions'>
@@ -18,37 +20,22 @@ const ToolDescriptions = (props) => {
                     </h4>
                 </Col>
             </Row>
-            <Row className='text-center'>
-                <Col className='m-4 bg-white rounded'>
-                    <FontAwesomeIcon 
-                        icon={faWrench}
-                        size='6x'
-                        className='p-4'
-                    />
-                    <p className='p-3'>
-                        {how}
-                    </p>
-                </Col>
-                <Col className='m-4 bg-white rounded'>
-                    <FontAwesomeIcon 
-                        icon={faUsers}
-                        size='6x'
-                        className='p-4'
-                    />
-                    <p className='p-3'>
-                        {who} 
-                    </p>
-                </Col>
-                <Col className='m-4 bg-white rounded'>
-                    <FontAwesomeIcon 
-                        icon={faQuestionCircle}
-                        size='6x'
-                        className='p-4'
-                    />
-                    <p className='p-3'>
-                        {why}
-                    </p>
-                </Col>
+            <Row>
+                <ToolDescription 
+                    style={style}
+                    faIcon={faWrench}
+                    detail={how}
+                />
+                <ToolDescription 
+                    style={style}
+                    faIcon={faUsers}
+                    detail={who}
+                />
+                <ToolDescription 
+                    style={style}
+                    faIcon={faQuestionCircle}
+                    detail={why}
+                />
             </Row>
         </section>
     )

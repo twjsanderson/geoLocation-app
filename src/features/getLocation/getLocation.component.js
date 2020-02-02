@@ -19,6 +19,7 @@ const GetLocationView = (props) => {
     } = props;
 
     const content = locationContent.locationContent;
+    const whiteStyle = { style: 'm-4 bg-white text-center rounded'};
 
     return (
         <section id='getlocation-view'>
@@ -29,6 +30,7 @@ const GetLocationView = (props) => {
                     how={content.how}
                     who={content.who}
                     why={content.why}
+                    style={whiteStyle.style}
                 />
                 <Row>
                     {              

@@ -16,13 +16,29 @@ const connectionContent = {
 
 const systemContent = {
     title: 'System Identifier',
-    description: 'This tool uses the browser to identify your Browser Type, Operating System and Device Type.',
+    description: 'This tool identifies your Browser Type, Operating System and Device Type.',
     how: 'The BOM also allows developers to access information about the type of device you are using and the specific systems that run on that device.',
     who: 'Businesses and hackers are always looking for simple ways to assess the capabilities of a user\'s system.',
     why: 'Hackers will utilize this kind of data to help them identify vulnerabilities that are specific to a certain device model or operating system version.'
 };
 
+const languageContent = {
+    title: 'Language Estimator',
+    description: 'This tool peaks at your browser settings to find out what language(s) you use.',
+    how: 'Have you ever wondered why every web page you go to seems to know what language you speak? Your browser does a great job of storing this information for websites use.',
+    who: 'This information helps modern browsers translate foriegn languages into something you can understand. For multilingual users, browsers also store a list of alternate language choices that you may have used or interacted with in the past.',
+    why: 'In order to capture the attention of users who speak different languages, websites will often utilize this feature to increase their market share around the world. It can also be utilized by hackers to gain a small but vital piece of information about a potential target.'
+};
 
-export default { locationContent, connectionContent, systemContent };
+const trackingContent = {
+    title: 'Activity Tracker',
+    description: 'This tool uses the browser to track data about your recent activity on this website.',
+    how: 'Every time you scroll down a page or click a button, there is the potential for a webpage to capture that event for analysis. These events are easy to track in both the BOM and the front end code of any website.',
+    who: 'Any website or app can track this data with the Google analytics platform or customized analytics tools built by a web developer.',
+    why: 'This information is vital for any online business to understand how users interact with their website. Details about where web traffic comes from and how users spend time on a website is on easy offer for sales and marketing analysis.'
+};
+
+
+export default { locationContent, connectionContent, systemContent, languageContent, trackingContent };
 
 

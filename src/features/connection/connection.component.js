@@ -12,6 +12,8 @@ const content = connectionContent.connectionContent;
 
 const ConnectionView = (props) => {
     const { connectionData, getConnectionData, clearConnectionData } = props;
+    const whiteStyle = { style: 'm-4 bg-white text-center rounded' };
+
     return (
         <section id='connection-view'>
             <Container>
@@ -21,6 +23,7 @@ const ConnectionView = (props) => {
                     how={content.how}
                     who={content.who}
                     why={content.why}
+                    style={whiteStyle.style}
                 />
                 <Row>
                     {
