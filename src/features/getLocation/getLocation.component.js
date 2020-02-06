@@ -41,9 +41,15 @@ const GetLocationView = (props) => {
                                 : geoLocationError !== null ? 
                                     <h4>{geoLocationError}</h4>
                                     : geoLocationData ? ( 
-                                            <Col>
-                                                <h4>Latitude: {geoLocationData.latitude}</h4>
-                                                <h4>Longitude: {geoLocationData.longitude}</h4>
+                                            <Col className='p-3 bg-white rounded'>
+                                                <Row>
+                                                    <h3 className='px-2'>Latitude:</h3> 
+                                                    <h4 className='text-primary p-1'>{geoLocationData.latitude}</h4>
+                                                </Row>
+                                                <Row>
+                                                    <h3 className='px-2'>Longitude:</h3> 
+                                                    <h4 className='text-primary p-1'>{geoLocationData.longitude}</h4>
+                                                </Row>
                                                 {
                                                     geoLocationData.accuracy > 100 ? 
                                                         <h4>Location Accuracy: <span id='poor'>Poor</span></h4> 

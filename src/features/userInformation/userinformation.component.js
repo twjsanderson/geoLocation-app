@@ -30,7 +30,7 @@ const UserInformationView = (props) => {
                     style={blueStyle.style}
                 />
                 <Row className='h-100 justify-content-center align-items-center'>
-                    <Col md={5} className='text-center'>
+                    <Col md={5} className='text-left'>
                         {
                             userData.osName && userData.browserName ?
                                 <>

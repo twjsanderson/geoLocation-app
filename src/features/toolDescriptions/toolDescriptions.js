@@ -15,7 +15,7 @@ const ToolDescriptions = (props) => {
                     <h1>
                         {title}
                     </h1>
-                    <h4 className='p-4'>
+                    <h4 className='description p-4'>
                         {description}
                     </h4>
                 </Col>

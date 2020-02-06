@@ -25,7 +25,7 @@ const TimeOnPageView = (props) => {
                     style={whiteStyle.style}
                 />
                 <Row>
-                    <Col className='text-center'> 
+                    <Col className=''> 
                         { date ? <h4>You landed on this page on: {date}</h4> : null }
                         {
                             showData === true ? (
