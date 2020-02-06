@@ -10,7 +10,8 @@ const Connection = () => {
         let data = window.clientInformation.connection;
         let connectionObject = {
             networkType: data.effectiveType,
-            approxBandwith: data.downlink,
+            downlink: data.downlink,
+            uplink: data.downlink,
             roundTrip: data.rtt
         };
         setConnectionData(connectionObject)

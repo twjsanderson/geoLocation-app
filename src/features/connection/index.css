@@ -19,5 +19,17 @@ p {
 .title {
     font-family: 'Permanent Marker', cursive;
     color: #904BB4;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+}
+
+#connection-view .good {
+    color: green;
+}
+
+#connection-view .poor {
+    color: red;
+}
+
+#connection-view .average {
+    color: blue;
 }

@@ -16,8 +16,12 @@ p {
     font-size: 1.2rem;
 }
 
-.language {
-    font-family: 'Permanent Marker', cursive;
-    color: #904BB4;
-    font-size: 2rem;
+.first {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.second {
+    color: white;
+    font-size: 2.5rem;
 }

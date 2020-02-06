@@ -2,46 +2,39 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './index.css';
 
-// TODO: put disclaimer as pop up!
-
 const Intro = () => {
     return (
         <section id='intro'>
             <Container>
                 <Row>
                     <Col className='text-center p-3'>
-                        <h2 className='p-3'>
+                        <h1 className='p-3'>
                             Data Privacy and Your Browser
+                        </h1>
+                        <h2 className='p-3'>
+                            Have you ever wondered how websites and mobile apps collect your personal information? 
+                            Through a series of easy to use tools, Browser Power will help you answer this question.
                         </h2>
-                        <p>
-                            Have you ever wondered how websites and mobile apps collect information about you?
-                        </p>
-                        <p>
-                            Through a series of easy to use tools, Browser Power will help you answer this question. 
-                            Each tool is built to showcase what kind of information your browser collects about you 
-                            and your computer system.
-                        </p>
-                        <p>
-                            Every tool is accompanied by an explanantion of how your data was collected, how it could 
-                            be analyzed, sold and used by a company or hacker.
-                        </p>
                    </Col>
                 </Row>
+                <Row className='p-1'>
+                    <Col className='intro-col'>
+                        <h2 className='text-center'>Are these tools easy to build?</h2>
+                        <h4 className='text-center p-3'> 
+                            Yes! Each tool is built with free, open source software and contain brief descriptions of 
+                            how the underlying technologies are used by web developers, businesses &amp; hackers in the real world. 
+                        </h4>
+                    </Col>
+                    <Col className='intro-col'>
+                        <h2 className='text-center'>Disclaimer</h2>
+                        <h4 className='text-center p-3'>
+                            This app does NOT collect or store any of your personal data. Each tool displays
+                            publicly accessible information found inside your browser. This application was built for
+                            strcitly educational purposes. 
+                        </h4>
+                    </Col>
+                </Row>
             </Container>
-            {/* <Row>
-                <Col className='disclaimer text-center p-3'>
-                    <Container>
-                            <p className='disclaimer-title text-danger'>
-                                Disclaimer:
-                            </p> 
-                            <p className='disclaimer-text'>
-                            Any information pulled from your browser is NEVER collected, stored or 
-                            analyzed in any form. It is only displayed on your system for strictly educational 
-                            purposes.
-                        </p>
-                    </Container>
-                </Col>
-            </Row> */}
         </section>
     )
 };

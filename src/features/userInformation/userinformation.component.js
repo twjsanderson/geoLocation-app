@@ -29,18 +29,30 @@ const UserInformationView = (props) => {
                     why={content.why}
                     style={blueStyle.style}
                 />
-                <Row className='h-100 justify-content-center align-items-center'>
+                <Row className='h-100 justify-content-center align-items-center bg-secondary rounded'>
                     <Col md={5} className='text-left'>
                         {
                             userData.osName && userData.browserName ?
-                                <>
-                                    <h4>Operating System: {userData.osName}</h4>
-                                    <h4>Operating System Version: {userData.osVersion}</h4>
-                                    <h4>Browser Name: {userData.browserName}</h4>
-                                    <h4>Browser Version: {userData.browserVersion}</h4>
-                                    <h4>Browser Engine Name: {userData.engineName}</h4>
-                                    <h4>Device Type: {userData.deviceType === 'browser' ? 'Computer/Laptop' : userData.deviceType}</h4>
-                                </>
+                                <div className='p-3'>
+                                    <Row>
+                                        <h3 className='px-2'>Device Type:</h3> <h4 className='text-white p-1'> {userData.deviceType === 'browser' ? 'Computer/Laptop' : userData.deviceType}</h4>
+                                    </Row>
+                                    <Row>
+                                        <h3 className='px-2'>Operating System:</h3> <h4 className='text-white p-1'> {userData.osName}</h4>
+                                    </Row>
+                                    <Row>
+                                        <h3 className='px-2'>Operating System Version:</h3> <h4 className='text-white p-1'> {userData.osVersion}</h4>
+                                    </Row>
+                                    <Row>
+                                        <h3 className='px-2'>Browser Name:</h3> <h4 className='text-white p-1'> {userData.browserName}</h4>
+                                    </Row>
+                                    <Row>
+                                        <h3 className='px-2'>Browser Version:</h3> <h4 className='text-white p-1'> {userData.browserVersion}</h4>
+                                        </Row>
+                                    <Row>
+                                        <h3 className='px-2'>Browser Engine Name:</h3> <h4 className='text-white p-1'> {userData.engineName}</h4>
+                                    </Row>
+                                </div>
                                 : null
                         }
                         {

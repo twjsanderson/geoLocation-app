@@ -25,18 +25,30 @@ const TimeOnPageView = (props) => {
                     style={whiteStyle.style}
                 />
                 <Row>
-                    <Col className=''> 
-                        { date ? <h4>You landed on this page on: {date}</h4> : null }
-                        {
-                            showData === true ? (
-                                <>
-                                    <h4>You came to this site from: {referrer}</h4>
-                                    <h4>This tool has been open for: {minutes} mins : {seconds} secs</h4>
-                                    <h4>You have clicked the tracking button: {trackingData} time(s) in the time example.</h4>
-                                </>
-                                ) : null
-                        }
-                    </Col>
+                    {
+                        showData && date ?
+                            <Col className='bg-white rounded p-3'> 
+                            <>
+                                    <Row className='p-2'>
+                                        <h3>You opened this page on:</h3> 
+                                        <h3 className='px-1 text-primary'>{date}</h3>
+                                    </Row>
+                                        <Row className='p-2'>
+                                            <h3>You came to this site from:</h3> 
+                                            <h3 className='px-1 text-primary'>{referrer}</h3>
+                                        </Row>
+                                        <Row className='p-2'>
+                                            <h3>This tool has been open for:</h3> 
+                                            <h3 className='px-1 text-primary'>{minutes} mins : {seconds} secs</h3>
+                                        </Row>
+                                        <Row className='p-2'>
+                                            <h3>You have clicked the <strong>Show Tracking Information</strong> button:</h3> 
+                                            <h3 className='px-1 text-primary'>{trackingData} time(s)</h3>
+                                        </Row>
+                                    </>
+                            </Col>
+                            : null
+                    }
                 </Row>
                 <Row>
                     <Col className='text-center pb-3'>

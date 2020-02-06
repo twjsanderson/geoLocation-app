@@ -25,19 +25,32 @@ const LanguagesView = (props) => {
                     style={blueStyle.style}
                 />
                 <Row>
-                    <Col className='text-center'>
+                    <Col className='text-center bg-secondary rounded'>
                         {
-                            currentLanguage ? <h2>Your primary language is: <span className='language'>{currentLanguage}</span></h2> : null
+                            currentLanguage ? 
+                                <Row className='justify-content-center align-items-center'>
+                                    <h3>Your primary language for browsing the web is:</h3>  
+                                    <h3 className='px-2 first'>{currentLanguage}</h3>
+                                </Row>
+                                : null
                         }
-                        {
+                        <Row className='justify-content-center align-items-center'> 
+                            { 
                                 otherLanguages !== null ?
-                                otherLanguages.map(otherLanguage => { 
-                                    return otherLanguage !== currentLanguage ?
-                                        <h2 key={otherLanguage}>You may also use/understand: <span className='language'>{otherLanguage}</span></h2>
-                                        : null
-                            })
-                            : null
-                        }
+                                    <h3>The alternate language(s) stored in your browser are:</h3> 
+                                    : null
+                            }
+                            {
+                                otherLanguages !== null ? 
+                                    // eslint-disable-next-line
+                                    otherLanguages.map((otherLanguage, index) => {
+                                        if (otherLanguage !== otherLanguages[index - 1]) { 
+                                            return <h3 className='px-2 second' key={index}>{otherLanguage}</h3>
+                                        } 
+                                    })
+                                    : null
+                            }
+                        </Row>
                     </Col>
                 </Row>
                 <Row>

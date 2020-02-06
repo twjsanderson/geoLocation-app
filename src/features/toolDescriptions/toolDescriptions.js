@@ -25,16 +25,19 @@ const ToolDescriptions = (props) => {
                     style={style}
                     faIcon={faWrench}
                     detail={how}
+                    title={'How is this data accessed?'}
                 />
                 <ToolDescription 
                     style={style}
                     faIcon={faUsers}
                     detail={who}
+                    title={'Who uses this data?'}
                 />
                 <ToolDescription 
                     style={style}
                     faIcon={faQuestionCircle}
                     detail={why}
+                    title={'Why is this data accessed?'}
                 />
             </Row>
         </section>

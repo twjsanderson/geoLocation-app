@@ -49,15 +49,16 @@ const GetLocationView = (props) => {
                                                 <Row>
                                                     <h3 className='px-2'>Longitude:</h3> 
                                                     <h4 className='text-primary p-1'>{geoLocationData.longitude}</h4>
-                                                </Row>
+                                                
                                                 {
                                                     geoLocationData.accuracy > 100 ? 
-                                                        <h4>Location Accuracy: <span id='poor'>Poor</span></h4> 
+                                                        <h3 className='px-2'>Location Accuracy: <span id='poor'>Low</span></h3> 
                                                         : geoLocationData.accuracy > 15 ? 
-                                                            <h4>Location Accuracy: <span id='good'>Good</span></h4> 
-                                                            : <h4>Location Accuracy: <span id='excellent'>Excellent</span></h4>
+                                                            <h3 className='px-2'>Location Accuracy: <span id='good'>High</span></h3> 
+                                                            : <h3 className='px-2'>Location Accuracy: <span id='excellent'>Excellent</span></h3>
                                                 }  
-                                                <h4>Your estimated GPS coordinates are within <span id='accuracy'>{geoLocationData.accuracy} meters</span> of your actual location</h4>
+                                                    <h3 className='px-2'>Your estimated GPS coordinates are within <span id='accuracy'>{geoLocationData.accuracy} meters</span> of your actual location</h3>
+                                                </Row>
                                             </Col>
                                         ) : null
                     }

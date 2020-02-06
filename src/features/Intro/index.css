@@ -6,6 +6,17 @@
     font-size: 1.2rem;
 }
 
+.intro-col {
+    color: black;
+    font-family:  'Poppins', sans-serif;
+    font-size: 1.5rem;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 1em;
+    margin: 2em;
+}
+
 .styled {
     font-family: 'Permanent Marker', cursive;
     color: #904BB4;

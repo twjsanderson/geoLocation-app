@@ -1,14 +1,13 @@
 import React from 'react'
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const FooterView = () => {
     return (
         <section id='footer-view'>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mx-auto">
+            <Navbar expand="lg" bg="dark" variant="dark">
+                <Row className='mx-auto text-center'>
+                    <Nav>
                         <Link className="p-2" to="/privacy">
                             Privacy
                         </Link>
@@ -19,7 +18,7 @@ const FooterView = () => {
                             Contact Us
                         </Link>
                     </Nav>
-                </Navbar.Collapse>
+                </Row>
             </Navbar>
         </section>
 
