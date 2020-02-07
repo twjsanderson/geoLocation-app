@@ -1,22 +1,40 @@
 import React from 'react'
 import './index.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Element, animateScroll as scroller } from 'react-scroll';
 
-// TODO: add links to title and Get Started
 
 const HomeView = () => {
+
+    const goToGetStarted = () => {
+        scroller.scrollTo('getStarted', {
+            smooth: true, 
+            duration: 1200
+        })
+    };
+
+    const goToFirstTool = () => {
+        scroller.scrollTo('firstTool', {
+            smooth: true, 
+            duration: 1200
+        })
+    };
+
     return (
         <section id='home-view'>
             <Container className='h-100'>
                 <Row className='h-75 d-flex justify-content-center align-items-center'>
                     <Col lg={8}>
-                        <h1 id='title'>
-                            Browser 
-                            <br /> 
-                            Power
-                        </h1>
+                            <h1 
+                                id='title'
+                                onClick={() => goToGetStarted()}
+                            >
+                                Browser 
+                                <br /> 
+                                Power
+                            </h1>
                     </Col>
                     <Col lg={4} id='detail'>
                         <h2 className='py-2'>What is this?</h2>
@@ -28,12 +46,18 @@ const HomeView = () => {
                 </Row>
                 <Row className='h-25'>
                     <Col className='text-center arrow'>
-                        <h3 className='arrow-title'>Get Started!</h3>
+                        <h3 
+                            className='arrow-title'
+                            onClick={() => goToFirstTool()}
+                        >
+                            Get Started!
+                        </h3>
                         <FontAwesomeIcon 
-                            icon={faChevronDown} 
+                            icon={faChevronDown}
                         />
                     </Col>
                 </Row>
+                <Element name="getStarted"></Element>
             </Container>
         </section>
     )

@@ -16,11 +16,11 @@ const content = systemContent.systemContent;
 const UserInformationView = (props) => {
     const { userData, mobileData, getUserData, clearData } = props;
 
-    const blueStyle = { style: 'm-4 bg-secondary text-center rounded' };
+    const blueStyle = { style: 'm-4 p-4 bg-secondary text-center rounded' };
 
     return (
         <section id="userinformation-view">
-            <Container>
+            <Container className='p-4'>
                 <ToolDescriptions 
                     title={content.title}
                     description={content.description}
@@ -29,30 +29,30 @@ const UserInformationView = (props) => {
                     why={content.why}
                     style={blueStyle.style}
                 />
-                <Row className='h-100 justify-content-center align-items-center bg-secondary rounded'>
+                <Row className='h-100 justify-content-center align-items-center bg-secondary rounded m-4'>
                     <Col md={5} className='text-left'>
                         {
                             userData.osName && userData.browserName ?
-                                <div className='p-3'>
+                                <Row className='p-3'>
                                     <Row>
-                                        <h3 className='px-2'>Device Type:</h3> <h4 className='text-white p-1'> {userData.deviceType === 'browser' ? 'Computer/Laptop' : userData.deviceType}</h4>
+                                        <h3 className='px-1'>Device Type:</h3> <h4 className='text-white p-1'> {userData.deviceType === 'browser' ? 'Computer/Laptop' : userData.deviceType}</h4>
                                     </Row>
                                     <Row>
-                                        <h3 className='px-2'>Operating System:</h3> <h4 className='text-white p-1'> {userData.osName}</h4>
+                                        <h3 className='px-1'>Operating System:</h3> <h4 className='text-white p-1'> {userData.osName}</h4>
                                     </Row>
                                     <Row>
-                                        <h3 className='px-2'>Operating System Version:</h3> <h4 className='text-white p-1'> {userData.osVersion}</h4>
+                                        <h3 className='px-1'>Operating System Version:</h3> <h4 className='text-white p-1'> {userData.osVersion}</h4>
                                     </Row>
                                     <Row>
-                                        <h3 className='px-2'>Browser Name:</h3> <h4 className='text-white p-1'> {userData.browserName}</h4>
+                                        <h3 className='px-1'>Browser Name:</h3> <h4 className='text-white p-1'> {userData.browserName}</h4>
                                     </Row>
                                     <Row>
-                                        <h3 className='px-2'>Browser Version:</h3> <h4 className='text-white p-1'> {userData.browserVersion}</h4>
+                                        <h3 className='px-1'>Browser Version:</h3> <h4 className='text-white p-1'> {userData.browserVersion}</h4>
                                         </Row>
                                     <Row>
-                                        <h3 className='px-2'>Browser Engine Name:</h3> <h4 className='text-white p-1'> {userData.engineName}</h4>
+                                        <h3 className='px-1'>Browser Engine Name:</h3> <h4 className='text-white p-1'> {userData.engineName}</h4>
                                     </Row>
-                                </div>
+                                </Row>
                                 : null
                         }
                         {

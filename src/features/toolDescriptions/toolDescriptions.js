@@ -11,8 +11,8 @@ const ToolDescriptions = (props) => {
     return (
         <section id='tool-decriptions'>
             <Row className='text-center'>
-                <Col className='p-2'>
-                    <h1>
+                <Col className='p-4'>
+                    <h1 className='text-dark'>
                         {title}
                     </h1>
                     <h4 className='description p-4'>

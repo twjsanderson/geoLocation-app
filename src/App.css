@@ -4,6 +4,11 @@
 .bg-secondary {
     background-color: #4cb385 !important;
 }
+
+.text-main {
+    color: #4cb385 !important;
+}
+
 .tool-button {
     background-color: #904BB4;
     font-family: 'Poppins', 'sans-serif';

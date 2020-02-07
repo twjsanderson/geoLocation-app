@@ -11,11 +11,11 @@ import ToolDescriptions from '../toolDescriptions';
 const TimeOnPageView = (props) => {
     const { trackingButton, clearTime, date, seconds, minutes, trackingData, referrer, showData } = props;
     const content = trackingContent.trackingContent;
-    const whiteStyle = { style: 'm-4 bg-white text-center rounded' };
+    const whiteStyle = { style: 'm-4 p-4 bg-white text-center rounded' };
 
     return (
         <section id='timeonpage-view'>
-            <Container>
+            <Container className='p-4'>
                 <ToolDescriptions 
                     title={content.title}
                     description={content.description}
@@ -24,7 +24,7 @@ const TimeOnPageView = (props) => {
                     why={content.why}
                     style={whiteStyle.style}
                 />
-                <Row>
+                <Row className='p-4'>
                     {
                         showData && date ?
                             <Col className='bg-white rounded p-3'> 

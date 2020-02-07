@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.icon:hover {
+    color: white !important;
+    -webkit-transition: color 7s; /* Safari prior 6.1 */
+    transition: color 0.7s;
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    color: #904BB4 !important;
+    font-size: 1.3rem !important;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+    -webkit-transition: color 0.7s; /* Safari prior 6.1 */
+    transition: color 0.7s;
+}

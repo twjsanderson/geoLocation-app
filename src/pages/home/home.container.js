@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import {  } from 'react-bootstrap';
+import { Element } from 'react-scroll';
+
 import './index.css'
 
 // components
@@ -11,7 +12,6 @@ import GetLocation from '../../features/getLocation';
 import UserInformation from '../../features/userInformation';
 import Connection from '../../features/connection';
 import Languages from '../../features/languages';
-import AutoFill from '../../features/autofill';
 import TimeOnPage from '../../features/timeOnPage';
 
 const Home = () => {
@@ -26,11 +26,11 @@ const Home = () => {
         <section id='home'>
                 <HomeView />
                 <Intro />
+                <Element name="firstTool"></Element>
                 <GetLocation />
                 <UserInformation />
                 <Connection />
                 <Languages />
-                {/* <AutoFill /> */}
                 <TimeOnPage landingTime={landingTime} />
         </section>
     )

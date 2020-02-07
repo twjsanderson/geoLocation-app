@@ -1,11 +1,17 @@
 import React from 'react'
+import ResourcesView from './resources.component';
+
+// constants
+import resources from '../../constants/resourceArticles.js';
 
 const Resources = () => {
     return (
-        <div>
-           <h1>Resources</h1> 
-        </div>
+        <section id='resources'>
+            <ResourcesView 
+                resources={resources}
+            />
+        </section>
     )
-}
+};
 
 export default Resources;

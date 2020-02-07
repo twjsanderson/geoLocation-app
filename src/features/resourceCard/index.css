@@ -1,0 +1,13 @@
+.resource-title {
+    /* font-family:  'Permanent Marker', cursive; */
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+    height: 10em;
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+#resources-view {
+    background-color: white;
+    background-image:
+        linear-gradient(
+            to right, 
+            #904BB4, 
+            white 50%
+        );    
+}
+
+#resources-view h1 {
+    color: #904BB4;
+    font-size: 4rem;
+}
+
+#resources-view .arrow {
+    color: black !important;
+    size: 4em !important;
+}
+
+#resources-view .arrow:hover {
+    color: #904BB4 !important;
+}
+
+.resource-box {
+    border: 2px solid black;
+}
+
+.resource-col {
+    border: 2px solid black;
+}
+

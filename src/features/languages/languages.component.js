@@ -11,11 +11,11 @@ import ToolDescriptions from '../toolDescriptions';
 const LanguagesView = (props) => {
     const { currentLanguage, otherLanguages, getCurrentLanguage, clearLanguages } = props;
     const content = languageContent.languageContent;
-    const blueStyle = { style: 'm-4 bg-secondary text-center rounded' };
+    const blueStyle = { style: 'm-4 p-4 bg-secondary text-center rounded' };
 
     return (
         <section id="languages-view">
-            <Container>
+            <Container className='p-4'>
                 <ToolDescriptions 
                     title={content.title}
                     description={content.description}
@@ -24,7 +24,7 @@ const LanguagesView = (props) => {
                     why={content.why}
                     style={blueStyle.style}
                 />
-                <Row>
+                <Row className='p-4'>
                     <Col className='text-center bg-secondary rounded'>
                         {
                             currentLanguage ? 

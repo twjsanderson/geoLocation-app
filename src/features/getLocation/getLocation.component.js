@@ -19,11 +19,11 @@ const GetLocationView = (props) => {
     } = props;
 
     const content = locationContent.locationContent;
-    const whiteStyle = { style: 'm-4 bg-white text-center rounded'};
+    const whiteStyle = { style: 'm-4 p-4 bg-white text-center rounded'};
 
     return (
         <section id='getlocation-view'>
-            <Container>
+            <Container className='p-4'>
                 <ToolDescriptions 
                     title={content.title}
                     description={content.description}
@@ -32,7 +32,7 @@ const GetLocationView = (props) => {
                     why={content.why}
                     style={whiteStyle.style}
                 />
-                <Row>
+                <Row className='p-4'>
                     {              
                         geoLocationAvailable === false ? 
                             <h4>Your browser does not support geolocation tracking.</h4> 
@@ -41,7 +41,7 @@ const GetLocationView = (props) => {
                                 : geoLocationError !== null ? 
                                     <h4>{geoLocationError}</h4>
                                     : geoLocationData ? ( 
-                                            <Col className='p-3 bg-white rounded'>
+                                            <Col className='p-4 bg-white rounded'>
                                                 <Row>
                                                     <h3 className='px-2'>Latitude:</h3> 
                                                     <h4 className='text-primary p-1'>{geoLocationData.latitude}</h4>
