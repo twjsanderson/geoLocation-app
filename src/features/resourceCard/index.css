@@ -1,13 +1,26 @@
+
+#resource-card {
+    padding: 2rem;
+}
+
 .resource-title {
-    /* font-family:  'Permanent Marker', cursive; */
     color: black;
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
     border-bottom: 2px solid black;
+    padding-bottom: 1.7rem;
+    padding-top: 1.7rem;
+    margin-bottom: 1.3rem;
+}
+
+#resource-card a {
+    color: #904BB4;
+    font-weight: 600;
 }
 
 .fit-image {
     width: 100%;
     object-fit: cover;
-    height: 10em;
+    height: 13em;
 }
+
