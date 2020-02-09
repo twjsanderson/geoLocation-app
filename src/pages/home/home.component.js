@@ -3,7 +3,8 @@ import './index.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { Element, animateScroll as scroller } from 'react-scroll';
+// eslint-disable-next-line
+import { Element, animateScroll as scrollSpy, scroller } from 'react-scroll';
 
 
 const HomeView = () => {
