@@ -1,7 +1,6 @@
 # Browser Power
-================
 
-A free educational tool designed to teach people how web developers and hackers user web browsers to access their private data.
+A free educational tool designed to teach people how developers and hackers use web browsers to access their private data.
 
 ## Screenshot
 

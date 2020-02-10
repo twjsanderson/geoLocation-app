@@ -40,8 +40,8 @@ const HomeView = () => {
                     <Col lg={4} id='detail'>
                         <h2 className='py-2'>What is this?</h2>
                         <p>
-                            A free educational tool designed to teach people how web developers and hackers
-                            user web browsers to access their private data.
+                            A free educational tool designed to teach people how developers and hackers
+                            use web browsers to access their private data.
                         </p>
                     </Col>
                 </Row>
