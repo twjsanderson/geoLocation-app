@@ -17,7 +17,7 @@ const AboutView = () => {
                         className='profilePic py-3 pr-3 rounded'
                         alt='profile'
                     />
-                    <h2 className='px-2 pt-2 pb-1'>Tom Sanderson</h2>
+                    <h2 className='pt-2 pb-1'>Tom Sanderson</h2>
                     <h4 className='pb-2'>Web Developer | Hacker</h4>
                     <p>
                         The idea for Browser Power came to me just before graduating from a Web Development bootcamp at Lighthouse Labs in 2019.
@@ -53,6 +53,7 @@ const AboutView = () => {
                     </p>
                     <p> 
                         Ultimately, my hope is that Browser Power helps create a more informed and critical discussion around data privacy and the collection/use of personal information. Happy Hacking!
+                        For developers who want to see my code, check out my <a href='https://github.com/twjsanderson/geoLocation-app'>Github repo here</a>.
                     </p>
                     <p>
                         <strong>- TS</strong>

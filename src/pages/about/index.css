@@ -3,3 +3,13 @@
     height: auto;
     float: left;
 }
+
+
+@media (max-width: 525px) {
+    .profilePic {
+        width: 20em;
+        height: auto;
+        float: none;
+        margin-left: 20%;
+    }
+}
