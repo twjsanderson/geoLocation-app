@@ -3,6 +3,10 @@
 
 A free educational tool designed to teach people how web developers and hackers user web browsers to access their private data.
 
+## Screenshot
+
+!["Home"](https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png)
+
 ## Author
 
 Lead Developer: Tom Sanderson
@@ -16,10 +20,10 @@ For questions or bug reporting email: tom.w.j.sanderson@gmail.com
 Runs the app in the development mode.<br />
 
 ```
-    - clone the project
-    - move into the project directory
-    - npm install
-    - npm start (it will run on localhost:3000 in the browser)
+- clone the project
+- move into the project directory
+- npm install
+- npm start (it will run on localhost:3000 in the browser)
 ```
 
 ## Tech Stack
