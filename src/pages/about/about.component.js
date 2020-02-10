@@ -3,10 +3,10 @@ import './index.css';
 import { Row, Col } from 'react-bootstrap';
 
 // images
-import profile2 from '../../assets/images/profile2.jpg';
+import portfolio3 from '../../assets/images/portfolio3.jpg';
 
 const AboutView = () => {
-    const profilePic = profile2;
+    const profilePic = portfolio3;
 
     return (
         <section id='about-view'>

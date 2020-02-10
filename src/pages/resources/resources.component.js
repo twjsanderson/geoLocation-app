@@ -38,7 +38,6 @@ const ResourcesView = (props) => {
                             return index < 3 ?
                                 <Col md={3} key={index} className='resource-col m-5 rounded'>
                                     <ResourceCard 
-                                        
                                         resource={resource}
                                     />
                                 </Col>
@@ -52,7 +51,6 @@ const ResourcesView = (props) => {
                             return index > 2 ?
                                 <Col md={3} key={index} className='resource-col m-5 rounded'>
                                     <ResourceCard 
-                                        key={index}
                                         resource={resource}
                                     />
                                 </Col>

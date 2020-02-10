@@ -8,13 +8,13 @@ const FooterView = () => {
             <Navbar expand="lg" bg="dark" variant="dark">
                 <Row className='mx-auto text-center'>
                     <Nav>
-                        <Link className="p-2" to="/privacy">
+                        <Link className="nav-link p-2" to="/privacy">
                             Privacy
                         </Link>
-                        <Link className="p-2" to="/termsandconditions">
+                        <Link className="nav-link p-2" to="/termsandconditions">
                             Terms And Conditions
                         </Link>
-                        <Link className="p-2" to="/contact">
+                        <Link className="nav-link p-2" to="/contact">
                             Contact Us
                         </Link>
                     </Nav>
